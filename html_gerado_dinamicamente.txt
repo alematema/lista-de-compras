@@ -1,0 +1,71 @@
+<li class="collection-item">FRUTAS<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove FRUTAS" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">11<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 11" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">1<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 1" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>
+
+<li class="collection-item">2<a class="delete-item secondary-content"><i style="cursor:pointer;" title="Remove 2" class="fa fa-remove" onclick="listaDeComprasController.remover(event);"></i></a></li>

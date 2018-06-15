@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Lista De Compras - App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- MATERIALIZE CSS IMPORT : Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+	<!-- FONT AWESOME CSS IMPORT (materialize dependency) : minified CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<style>
+		#nova-item {
+			/*			padding-bottom: 26px;*/
+			color: black;
+			font-size: 150%;
+		}
+
+	</style>
+
+</head>
+
+<body onload="listaDeComprasController.loadListaDeCompras()">
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col s12">
+				<div id="main" class="card">
+					<div class="card-content">
+						<span class="card-title" style="font-weight: 100;">Lista de Compras</span>
+						<div class="row">
+							<form id="task-form" onsubmit="listaDeComprasController.adiciona(event);">
+								<div class="input-field col s12">
+									<input type="text" name="task" id="item">
+									<label id='nova-item' for="item">&#65291;</label>
+								</div>
+								<input id='save-task' type="submit" value="Salvar" class="btn">
+							</form>
+						</div>
+					</div>
+
+					<div class="card-action">
+						<div class="input-field col s12">
+							<label for="filter">Filtrar Lista</label> <input type="text" name="filter" id="filter">
+						</div>
+						<ul class="collection"></ul>
+						<button class="clear-tasks btn black" title="Apaga a lista de compras" onclick="listaDeComprasController.confirmarApagarListaCompras(event);">Apagar Lista</button>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- JQUERY IMPORT (materialize dependency) : uncompressed -->
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+	<!-- MATERIALIZE JS IMPORT : Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+	<script src="app/models/ListaDeCompras.js"></script>
+	<script src="app/models/Mensagem.js"></script>
+	<script src="app/views/ListaDeComprasView.js"></script>
+	<script src="app/views/MensagemView.js"></script>
+	<script src="app/controllers/ListaDeComprasController.js"></script>
+	
+	<script src="app/services/PersistenceService.js"></script>
+	<script src="app/services/ProxyFactory.js"></script>
+	<script src="app/services/Bind.js"></script>
+	<script src="app/services/LocalStoragePersistenceService.js"></script>
+ 
+	<script>
+
+		let persistenceServiceImp = new LocalStoragePersistenceService(localStorage, 'lista-compras');
+		let listaDeComprasController = new ListaDeComprasController(persistenceServiceImp);
+
+	</script>
+
+
+	<script>
+	/*
+		let mensagem = new Proxy(new Mensagem('nova mensaggem'),{
+
+			get(target,prop){
+				console.log(`lendo ${prop}`);
+			},
+
+			set(target,prop,value){
+				console.log(`escrevendo ${value} em ${prop} `);
+			}
+
+		}
+		);
+
+*/
+
+		let mensagem =  new Bind(
+			new Mensagem(),
+			new MensagemView(),
+			['texto']
+		);
+
+		
+		//mensagem.texto = 'busca';
+		//console.log(mensagem.texto);
+	
+	
+	</script>
+
+	<script>
+		
+		let listaDeCompras = new Proxy(new ListaDeCompras(), {
+			
+			get(target, prop, receiver){
+								
+
+				if(['add', 'remove'].includes(prop) && typeof(target[prop] === typeof(Function))) {
+
+					return function(){
+						
+						console.log(`accessing property ${prop}`);
+					
+						
+						Reflect.apply(target[prop], target, arguments);
+
+					}
+
+				}
+				
+				return Reflect.get(target,prop,receiver);
+				
+			},
+			
+			set: function(target, prop, value , receiver) {
+
+				console.log(`old value ${target[prop]} -> new value ${value}`);
+				return Reflect.set(target,prop,value,receiver);
+
+			}	
+
+		});
+
+		//listaDeCompras.add('bananas 1/2 dúzia');
+		//listaDeCompras.remove('bananas 1/2 dúzia');
+		//console.log(listaDeCompras.all);
+
+	</script>
+
+	<!-- Code injected by live-server 
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					head.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					head.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+	-->
+
+</body>
+
+
+
+</html>
